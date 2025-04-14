@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Isabella Ulibarri Macouzet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f6f6f6;
+      color: #060606;
+      padding: 20px;
+    }
+
+    header {
+      background: rgb(255, 173, 226);
+      padding: 40px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    header h2 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    header a {
+      display: inline-block;
+      margin: 0 10px;
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #ff4ca6;
+      transition: color 0.3s ease;
+    }
+
+    section {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      transition: transform 0.4s ease;
+      border-radius: 10%;
+      width: 50%;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Isabella Ulibarri Macouzet</h1>
+    <h2>Marketing and Public Relations Portfolio</h2>
+    <a href="mailto:iulibarrimacouzet@fordham.edu">iulibarrimacouzet@fordham.edu</a>
+    <a href="https://www.linkedin.com/in/isabella-ulibarri-macouzet-3a113a69" target="_blank">LinkedIn</a>
+  </header>
+
+  <nav>
+    <a href="about.htm">About</a>
+    <a href="portfolio.htm">Portfolio</a>
+    <a href="club.htm">Clubs</a>
+    <a href="skills.htm">Skills</a>
+  </nav>
+
+  <section id="about">
+    <img src="profile pic.png" alt="Isabella Ulibarri Macouzet" />
+  </section>
+
+  <footer>
+    <p>© 2025 Isabella Ulibarri Macouzet</p>
+  </footer>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- JavaScript Enhancements -->
+  <script>
+    $(document).ready(function () {
+      // Fade-in effect
+      $("header, nav, section, footer").hide().fadeIn(1200);
+
+      // Smooth scroll (for future anchor sections)
+      $("nav a").on("click", function (e) {
+        const target = $(this).attr("href");
+        if (target.startsWith("#")) {
+          e.preventDefault();
+          $("html, body").animate({
+            scrollTop: $(target).offset().top
+          }, 800);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

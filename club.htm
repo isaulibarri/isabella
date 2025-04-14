@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clubs - Isabella Ulibarri Macouzet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+      padding: 20px;
+    }
+
+    header {
+      background: rgb(255, 173, 226);
+      padding: 30px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff4ca6;
+    }
+
+    .clubs-section {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .club-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      width: 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .club-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .club-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .club-card-content {
+      padding: 20px;
+    }
+
+    .club-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: #222;
+    }
+
+    .club-card p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clubs</h1>
+  </header>
+
+  <nav>
+    <a href="final.html">Home</a>
+    <a href="about.htm">About</a>
+    <a href="portfolio.htm">Portfolio</a>
+    <a href="skills.htm">Skills</a>
+  </nav>
+
+  <section class="clubs-section">
+    <!-- TWN -->
+    <div class="club-card">
+      <img src="twn.jpg" alt="TWN">
+      <div class="club-card-content">
+        <h3>The Women's Network</h3>
+        <p>The Women’s Network at Fordham empowers driven college women through networking, professional development, and leadership opportunities. As a member, I’ve connected with inspiring peers and industry professionals across various fields. Being part of this community has helped me grow both personally and professionally while building lasting relationships.</p>
+      </div>
+    </div>
+
+    <!-- Marketing Club -->
+    <div class="club-card">
+      <img src="fma.jpg" alt="marketing ">
+      <div class="club-card-content">
+        <h3>Fordham Marketing Association</h3>
+        <p>I’m a member of the Fordham Marketing Association, where I’ve gained real-world insights through speaker events and networking opportunities. The organization has helped me grow professionally and connect with peers interested in marketing.
+        </p>
+      </div>
+    </div>
+
+    <!--FFP -->
+    <div class="club-card">
+      <img src="ffp.jpg" alt="ffp">
+      <div class="club-card-content">
+        <h3>Fashion For Philanthropy</h3>
+        <p>As a member of Fashion for Philanthropy at Fordham, I help plan events like fashion shows and clothing drives that support charitable causes. It's a great way to combine my love for fashion with giving back to the community.</p>
+      </div>
+    </div>
+
+     <!--MODe -->
+     <div class="club-card">
+        <img src="mode.jpg" alt="Mode">
+        <div class="club-card-content">
+          <h3>Mode Magazine</h3>
+          <p>As a member of MODE Magazine at Fordham, I contribute to a student-run publication that showcases campus culture through fashion, beauty, and the arts. Collaborating with peers, I help create content that reflects the diverse and creative spirit of our university community.</p>
+        </div>
+      </div>
+  </section>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- jQuery Animation -->
+  <script>
+    $(document).ready(function () {
+      $("header, nav, .clubs-section").hide().fadeIn(1200);
+
+      $(".club-card").on("click", function () {
+        const title = $(this).find("h3").text();
+        alert(`You clicked on ${title}. (You can link this to photos, events, or leadership roles!)`);
+      });
+    });
+  </script>
+
+</body>
+</html>

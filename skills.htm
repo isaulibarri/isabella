@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skills - Isabella Ulibarri Macouzet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+      padding: 20px;
+    }
+
+    header {
+      background: rgb(255, 173, 226);
+      padding: 30px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff4ca6;
+    }
+
+    .skills-section {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .skill-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      width: 280px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-card h3 {
+      font-size: 1.2rem;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .skill-card ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    .skill-card ul li {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Skills & Strengths</h1>
+  </header>
+
+  <nav>
+    <a href="final.html">Home</a>
+    <a href="about.htm">About</a>
+    <a href="portfolio.htm">Portfolio</a>
+    <a href="contact.htm">Contact</a>
+  </nav>
+
+  <section class="skills-section">
+    <!-- Soft Skills -->
+    <div class="skill-card">
+      <h3>Soft Skills</h3>
+      <ul>
+        <li>Creative Thinking</li>
+        <li>Adaptability</li>
+        <li>Public Speaking</li>
+        <li>Team Collaboration</li>
+        <li>Time Management</li>
+      </ul>
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="skill-card">
+      <h3>Technical Skills</h3>
+      <ul>
+        <li>Adobe Photoshop & InDesign</li>
+        <li>Canva</li>
+        <li>Google Suite & Excel</li>
+        <li>CapCut</li>
+        <li>HTML5 & CSS3</li>
+      </ul>
+    </div>
+
+    <!-- Communication Skills -->
+    <div class="skill-card">
+      <h3>Communication</h3>
+      <ul>
+        <li>Marketing </li>
+        <li>PR Messaging</li>
+        <li>Pitch Decks & Presentations</li>
+        <li>Social Media Strategy</li>
+        <li>Influencer Outreach</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- jQuery Animation -->
+  <script>
+    $(document).ready(function () {
+      $("header, nav, .skills-section").hide().fadeIn(1200);
+
+      $(".skill-card").on("click", function () {
+        const skill = $(this).find("h3").text();
+        alert(`You're viewing skills in: ${skill}`);
+      });
+    });
+  </script>
+
+</body>
+</html>
